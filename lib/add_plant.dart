@@ -24,7 +24,7 @@ class _AddPlantState extends State<AddPlant> {
   }
 
   Future<void> addPlantDialog(BuildContext context) async {
-    return showDialog(
+    return await showDialog(
         context: context,
         builder: (context) {
           return StatefulBuilder(builder: (context, setState) {
