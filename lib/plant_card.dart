@@ -40,20 +40,7 @@ class PlantCard extends StatelessWidget {
                   label: Text('Update Health'.toUpperCase()),
                 ),
                 Expanded(child: Container()),
-                PopupMenuButton(
-                  onSelected: (_) {
-                    plant.delete();
-                  },
-                  icon: const Icon(Icons.more_vert),
-                  itemBuilder: (BuildContext context) => [
-                    PopupMenuItem(
-                      value: 'delete',
-                      child: Text('Delete',
-                          style:
-                              TextStyle(color: Theme.of(context).errorColor)),
-                    ),
-                  ],
-                ),
+                PlantOverflowMenu(plant: plant),
               ],
             ),
           ),
@@ -82,4 +69,98 @@ class PlantCard extends StatelessWidget {
       return 'never';
     }
   }
+}
+
+class PlantOverflowMenu extends StatelessWidget {
+  final Plant plant;
+
+  const PlantOverflowMenu({Key? key, required this.plant}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      onSelected: (OverflowOption option) {
+        switch (option) {
+          case OverflowOption.delete:
+            plant.delete();
+            break;
+          case OverflowOption.rename:
+            renameDialog(context, plant);
+            break;
+        }
+      },
+      icon: const Icon(Icons.more_vert),
+      itemBuilder: (BuildContext context) => [
+        const PopupMenuItem(
+          value: OverflowOption.rename,
+          child: Text('Rename'),
+        ),
+        PopupMenuItem(
+          value: OverflowOption.delete,
+          child: Text('Delete',
+              style: TextStyle(color: Theme.of(context).errorColor)),
+        ),
+      ],
+    );
+  }
+
+  Future<void> renameDialog(BuildContext context, Plant plant) async {
+    return await showDialog(
+        context: context,
+        builder: (context) {
+          return StatefulBuilder(builder: (context, setState) {
+            final form = GlobalKey<FormState>();
+            var name = plant.name;
+
+            return AlertDialog(
+              title: const Text('Rename'),
+              content: Form(
+                key: form,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: 'Name',
+                  ),
+                  initialValue: name,
+                  validator: (String? value) {
+                    var stripped = value?.trim();
+                    if (stripped == null || stripped.isEmpty) {
+                      return 'Name can\'t be empty';
+                    } else {
+                      return null;
+                    }
+                  },
+                  onSaved: (String? value) {
+                    name = value!;
+                  },
+                ),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () {
+                    if (form.currentState!.validate()) {
+                      form.currentState!.save();
+                      plant.name = name;
+                      plant.save();
+                      Navigator.pop(context);
+                    }
+                  },
+                  child: Text('Rename'.toUpperCase()),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Cancel'.toUpperCase()),
+                ),
+              ],
+            );
+          });
+        });
+  }
+}
+
+enum OverflowOption {
+  delete,
+  rename,
 }
