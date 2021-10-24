@@ -9,12 +9,14 @@ import 'package:hive_flutter/hive_flutter.dart';
 final ThemeData lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch(
     primarySwatch: Colors.blueGrey,
+    accentColor: Colors.lightGreenAccent,
     brightness: Brightness.light,
   ),
 );
 final ThemeData darkTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch(
     primarySwatch: Colors.blueGrey,
+    accentColor: Colors.lightGreenAccent,
     brightness: Brightness.dark,
   ),
 );

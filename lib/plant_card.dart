@@ -52,12 +52,14 @@ class PlantCard extends StatelessWidget {
   String readableEvent(DateTime? event) {
     if (event != null) {
       var d = DateTime.now().difference(event);
-      // TODO: use relative terms like 'yesterday' based on date rather than absolute time
-      // TODO: use singular nouns, e.g. '1 minute ago' rather than '1 minutes ago'
       if (d < const Duration(minutes: 1)) {
         return 'just now';
+      } else if (d < const Duration(minutes: 2)) {
+        return '1 minute ago';
       } else if (d < const Duration(hours: 1)) {
         return '${d.inMinutes} minutes ago';
+      } else if (d < const Duration(hours: 2)) {
+        return '1 hour ago';
       } else if (d < const Duration(days: 1)) {
         return '${d.inHours} hours ago';
       } else if (d < const Duration(days: 2)) {
