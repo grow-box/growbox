@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   id="svg4"
+   sodipodi:docname="icon-maskable.svg"
+   inkscape:export-filename="C:\Users\Dexter\Downloads\sprout-outline.png"
+   inkscape:export-xdpi="2047.3212"
+   inkscape:export-ydpi="2047.3212"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2291"
+     inkscape:window-height="1368"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="29.698485"
+     inkscape:cx="11.939715"
+     inkscape:cy="14.816342"
+     inkscape:window-x="-7"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Background"
+     style="display:inline">
+    <rect
+       style="fill:#393939;fill-opacity:1"
+       id="rect840"
+       width="24.007959"
+       height="24.007959"
+       x="-0.0039796829"
+       y="-0.0039796829" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Foreground">
+    <path
+       d="M 20.542069,5.6035691 V 4.1461544 l -1.457414,-0.161935 c -0.08097,0 -0.566773,-0.080968 -1.376448,-0.080968 -3.319667,0 -5.748691,0.9716098 -7.125138,2.6719269 C 9.5304914,5.927439 8.0730771,5.5226017 6.37276,5.5226017 c -0.8096749,0 -1.3764472,0.080968 -1.3764472,0.080968 L 3.4579306,5.8464718 3.5388986,7.222919 c 0.080968,2.4290244 1.2954797,7.044171 5.5057885,7.044171 0.080968,0 0.080968,0 0.1619345,0 v 2.752894 c -3.0767636,0.404837 -5.667723,1.457415 -5.667723,1.457415 v 1.61935 H 19.732394 v -1.61935 c 0,0 -2.590959,-1.052578 -5.667724,-1.457415 v -2.590959 c 5.100952,-0.08097 6.477399,-5.829659 6.477399,-8.8254558 M 11.635646,16.858049 c -0.242903,0 -0.566773,0 -0.809675,0 V 12.32387 c 0,0 -0.161934,-2.7528943 -2.429024,-2.7528943 0,0 1.2145124,0.6477403 1.5383824,2.9957963 -0.32387,0.08097 -0.6477402,0.08097 -0.8906425,0.08097 -3.7245042,0 -3.8864391,-5.4248213 -3.8864391,-5.4248213 0,0 0.4858049,-0.080968 1.2145122,-0.080968 1.5383821,0 4.048373,0.3238699 4.777081,2.509992 0.404838,-3.6435366 4.534179,-4.1293415 6.558366,-4.1293415 0.728708,0 1.214512,0.080968 1.214512,0.080968 0,0 0,7.2870728 -5.100951,7.2870728 -0.161935,0 -0.404837,0 -0.566772,0 0,-1.619349 1.61935,-4.0483735 1.61935,-4.0483735 -2.429025,0.8096747 -2.429025,3.9674065 -2.429025,3.9674065 v 4.048374 c -0.242902,0 -0.566772,0 -0.809675,0 z"
+       id="path2"
+       style="fill:#8bc34a;fill-opacity:1;stroke-width:0.809675" />
+  </g>
+</svg>
